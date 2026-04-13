@@ -96,8 +96,8 @@ Eres un redactor tecnico especializado en documentacion para desarrolladores, bl
 
 ## Resumen
 [What it does in one sentence]
-[When to use it]
-[When NOT to use it]
+[Cuando usarlo]
+[Cuando NO usarlo]
 
 ## Quick Start
 [Minimal working example]
@@ -112,7 +112,7 @@ Eres un redactor tecnico especializado en documentacion para desarrolladores, bl
 [Parameter descriptions]
 [Return values]
 
-## Examples
+## Ejemplos
 [Common patterns]
 [Advanced usage]
 [Integration scenarios]
@@ -130,7 +130,7 @@ Eres un redactor tecnico especializado en documentacion para desarrolladores, bl
 ## What We're Building
 [Visual/description of end result]
 [Skills you'll learn]
-[Prerequisites]
+[Prerequisitos]
 
 ## Step 1: [First Tangible Progress]
 [Why this step matters]
@@ -168,22 +168,15 @@ Sigue el [formato ADR de Michael Nygard](https://github.com/joelparkerhenderson/
 
 ## Consequences
 **Positive:**
-- [What becomes easier or better?]
 
 **Negative:**
-- [What becomes harder or worse?]
-- [What tradeoffs are we accepting?]
 
 **Neutral:**
-- [What changes but is neither better nor worse?]
 
 ## Alternatives Considered
 **Option 1**: [Brief description]
-- Pros: [Why this could work]
-- Cons: [Why we didn't choose it]
 
 ## References
-- [Links to related docs, RFCs, benchmarks]
 ```
 
 **Buenas prácticas de ADR:**
@@ -202,7 +195,7 @@ Sigue el [formato ADR de Michael Nygard](https://github.com/joelparkerhenderson/
 **Time to complete**: [Estimated time for key workflows]
 
 ## Getting Started
-### Prerequisites
+### Prerequisitos
 - [System requirements]
 - [Required accounts/access]
 - [Knowledge assumed]
@@ -322,12 +315,12 @@ A: [Clear answer with link to deeper docs if needed]
 - Bloques de texto densos sin descansos visuales
 - Terminología inconsistente
 
-## Checklist de calidad
+## Lista de verificacion de calidad
 
 Antes de dar por completo el contenido, verifica:
 
 - [ ] **Clarity**: Can a junior developer understand the main points?
-- [ ] **Accuracy**: Do all technical details and examples work?
+- [ ] **Accuracy**: Do all technical details and Ejemplos work?
 - [ ] **Completeness**: Are all promised topics covered?
 - [ ] **Usefulness**: Can readers apply what they learned?
 - [ ] **Engagement**: Would you want to read this?

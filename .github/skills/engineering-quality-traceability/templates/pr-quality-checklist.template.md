@@ -1,4 +1,4 @@
-# PR Quality Checklist Template
+# Plantilla de Lista de Verificacion de Calidad para PR
 
 ## Contexto del cambio
 
@@ -29,14 +29,14 @@
 
 ## Seguridad y cumplimiento
 
-- [ ] Input validation en fronteras.
+- [ ] Validacion de entrada en fronteras.
 - [ ] Secretos y datos sensibles protegidos.
 - [ ] AuthN/AuthZ verificada si aplica.
 
 ## Verificacion
 
-- [ ] Unit tests en verde.
-- [ ] Integration tests en verde.
+- [ ] Pruebas unitarias en verde.
+- [ ] Pruebas de integracion en verde.
 - [ ] Smoke test de rutas criticas.
 
 ## Rollback

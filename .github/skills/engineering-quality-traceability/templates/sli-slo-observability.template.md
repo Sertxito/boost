@@ -1,22 +1,25 @@
-# SLI/SLO Observability Template
+# Plantilla de Observabilidad SLI/SLO
 
 ## Servicio
 
 - Nombre:
-- Owner:
+- Responsable:
 - Entorno:
 
 ## SLI definidos
 
 1. Disponibilidad
-- SLI: porcentaje de requests exitosas.
-- Fuente: metricas de gateway/API.
 
-2. Latencia
+- SLI: porcentaje de solicitudes exitosas.
+- Fuente: metricas de pasarela/API.
+
+1. Latencia
+
 - SLI: p95 y p99 de endpoint critico.
 - Fuente: APM/tracing.
 
-3. Errores
+1. Errores
+
 - SLI: tasa de 5xx/errores de negocio.
 - Fuente: logs estructurados + metricas.
 
@@ -24,7 +27,7 @@
 
 - Disponibilidad mensual: ____%
 - Latencia p95: <= ____ ms
-- Error rate: <= ____%
+- Tasa de error: <= ____%
 
 ## Alertas
 

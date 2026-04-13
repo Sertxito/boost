@@ -1,6 +1,6 @@
 ---
 name: project-workflow-analysis-blueprint-generator
-description: 'Generador integral de prompts agnóstico a tecnología para documentar flujos end-to-end de aplicaciones. Detecta automáticamente patrones de arquitectura de proyecto, stacks tecnológicos y patrones de flujo de datos para generar blueprints de implementación detallados que cubren entry points, capas de servicio, acceso a datos, manejo de errores y enfoques de testing en múltiples tecnologías incluyendo .NET, Java/Spring, React y arquitecturas de microservicios.'
+description: 'Generador integral de prompts agnóstico a tecnología para documentar flujos de extremo a extremo de aplicaciones. Detecta automáticamente patrones de arquitectura de proyecto, stacks tecnológicos y patrones de flujo de datos para generar blueprints de implementación detallados que cubren puntos de entrada, capas de servicio, acceso a datos, manejo de errores y enfoques de testing en múltiples tecnologías incluyendo .NET, Java/Spring, React y arquitecturas de microservicios.'
 ---
 
 # Generador de documentacion de flujos del proyecto
@@ -36,7 +36,7 @@ ${INCLUDE_TEST_PATTERNS=true|false}
 ## Prompt generado
 
 ```
-"Analyze the codebase and document ${WORKFLOW_COUNT} representative end-to-end workflows 
+"Analiza el codebase y documenta ${WORKFLOW_COUNT} flujos representativos de extremo a extremo 
 that can serve as implementation templates for similar features. Use the following approach:
 ```
 
@@ -79,7 +79,7 @@ Para cada uno de los `${WORKFLOW_COUNT}` workflow(s) más representativos del si
 
 #### 1. Vista general del workflow
    - Provide a name and brief description of the workflow
-   - Explain the business purpose it serves
+   - Explain the business Proposito it serves
    - Identify the triggering action or event
    - List all files/classes involved in the complete workflow
 
@@ -289,5 +289,5 @@ Based on the documented workflows, provide specific guidance for implementing ne
 - Explain configuration-driven feature patterns
 
 **Conclusion:**
-Conclude with a summary of the most important patterns that should be followed when 
+Conclude with a Resumen of the most important patterns that should be followed when 
 implementing new features to maintain consistency with the codebase."

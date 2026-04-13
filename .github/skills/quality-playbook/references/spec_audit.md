@@ -105,7 +105,7 @@ That last category is the bridge between the spec audit and the test suite. Ever
 - Each batch: implement, test, have all three reviewers verify the diff
 - At least two auditors must confirm fixes pass before marking complete
 
-## Output
+## Salida
 
 Save audit reports to `quality/spec_audits/YYYY-MM-DD-[model].md`
 Save triage summary to `quality/spec_audits/YYYY-MM-DD-triage.md`
@@ -113,7 +113,7 @@ Save triage summary to `quality/spec_audits/YYYY-MM-DD-triage.md`
 
 ## Los cuatro guardrails (criticos para todos los auditores)
 
-Some models confidently claim features are missing without checking code. These four rules embedded in the audit prompt materially improve output quality by reducing vague and hallucinated findings:
+Some models confidently claim features are missing without checking code. These four rules embedded in the audit prompt materially improve Salida quality by reducing vague and hallucinated findings:
 
 1. **Mandatory line numbers** — If you cannot cite a line number, do not include the finding. This eliminates vague claims.
 2. **Grep before claiming missing** — Before saying a feature is absent, search the codebase. It may be in a different file.

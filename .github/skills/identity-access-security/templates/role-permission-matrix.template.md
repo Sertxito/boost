@@ -1,10 +1,12 @@
-# Role Permission Matrix Template
+# Plantilla de Matriz de Roles y Permisos
+
+<!-- markdownlint-disable MD060 -->
 
 ## Alcance
 
 - Dominio:
 - Entorno:
-- Owner:
+- Responsable:
 
 ## Roles y subroles
 

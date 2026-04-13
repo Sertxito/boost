@@ -9,7 +9,7 @@ La constitucion de calidad define que significa "calidad" para este proyecto con
 ```markdown
 # Quality Constitution: [Project Name]
 
-## Purpose
+## Proposito
 
 [2–3 paragraphs grounding quality in three principles:]
 
@@ -50,7 +50,7 @@ For a data pipeline: "counting output records without checking their values."
 For a web app: "checking HTTP 200 without checking the response body."
 For a compiler: "checking output compiles without checking behavior."]
 
-## Fitness-to-Purpose Scenarios
+## Escenarios de Ajuste al Proposito
 
 [5–10 scenarios. Every scenario must include a `[Req: tier — source]` tag linking it to its requirement source. Use the template below:]
 
@@ -77,7 +77,7 @@ Include exact commands, test names, or assertions.]
 2. Run the full test suite before marking any task complete.
 3. Add tests for new functionality (not just happy path — include edge cases).
 4. Update this file if new failure modes are discovered.
-5. Output a Quality Compliance Checklist before ending a session.
+5. Entrega una lista de verificacion de cumplimiento de calidad antes de cerrar una sesion.
 6. Never remove a fitness-to-purpose scenario. Only add new ones.
 
 ## The Human Gate
@@ -112,7 +112,7 @@ Don't limit yourself to what the code already defends against. Use your knowledg
 - "What happens if external input is subtly wrong?" (validation pipelines, API integrations)
 - "What happens if this runs at 10x scale?" (batch processing, databases, queues)
 - "What happens if two operations overlap?" (concurrency, file locks, shared state)
-- "What produces correct-looking output that is actually wrong?" (randomness, statistical operations, type coercion)
+- "What produces correct-looking Salida that is actually wrong?" (randomness, statistical operations, type coercion)
 
 These are not hypothetical — they are things that happen to every system of this type. Write them as **architectural vulnerability analyses**: "Because `save_state()` lacks an atomic rename pattern, a mid-write crash during a 10,000-record batch will leave a corrupted state file — the next run gets JSONDecodeError and cannot resume without manual intervention. At scale (9,240 records across 64 batches), this pattern risks silent loss of 1,693+ records with nothing to flag them as missing." Concrete numbers and specific consequences make scenarios authoritative and non-negotiable. An AI session reading "records can be lost" will argue the standard down. An AI session reading a specific failure mode with quantified impact will not.
 
@@ -122,10 +122,10 @@ Each scenario's "What happened" must read like an architectural vulnerability an
 
 - **Specific quantities** — "308 records across 64 batches" not "some records"
 - **Cascade consequences** — "cascading through all subsequent pipeline steps, requiring reprocessing of 4,300 records instead of 308"
-- **Detection difficulty** — "nothing would flag them as missing" or "only statistical verification would catch it"
+- **Deteccion difficulty** — "nothing would flag them as missing" or "only statistical verification would catch it"
 - **Root cause in code** — "`random.seed(index)` creates correlated sequences because sequential integers produce related random streams"
 
-The narrative voice serves a critical purpose: it makes standards non-negotiable. Abstract requirements ("records should not be lost") invite rationalization. Specific failure modes with quantified impact ("a mid-batch crash silently loses 1,693 records with no detection mechanism") do not. Frame these as "this architecture permits the following failure" — grounded in the actual code, not fabricated as past incidents.
+The narrative voice serves a critical Proposito: it makes standards non-negotiable. Abstract requirements ("records should not be lost") invite rationalization. Specific failure modes with quantified impact ("a mid-batch crash silently loses 1,693 records with no Deteccion mechanism") do not. Frame these as "this architecture permits the following failure" — grounded in the actual code, not fabricated as past incidents.
 
 ### Combinar ambas fuentes
 
@@ -141,7 +141,7 @@ The strongest scenarios combine a defensive pattern found in code with domain kn
 Every coverage target, every quality gate, every standard must have a "why" that references a specific scenario or risk. Without rationale, a future AI session will optimize for speed and argue the standard down.
 
 Bad: "Core logic: 100% coverage"
-Good: "Core logic: 100% — because `random.seed(index)` created correlated sequences that produced 77.5% bias instead of 50/50. Subtle bugs here produce plausible-but-wrong output. Only statistical verification catches them."
+Good: "Core logic: 100% — because `random.seed(index)` created correlated sequences that produced 77.5% bias instead of 50/50. Subtle bugs here produce plausible-but-wrong Salida. Only statistical verification catches them."
 
 The "why" is not documentation — it is protection against erosion.
 
@@ -153,7 +153,7 @@ Aim for 2+ scenarios per core module (the modules identified as most complex or 
 
 After drafting all scenarios, review each one and ask:
 
-1. **"Would an AI session argue this standard down?"** If yes, the "why" isn't concrete enough. Add numbers, consequences, and detection difficulty.
+1. **"Would an AI session argue this standard down?"** If yes, the "why" isn't concrete enough. Add numbers, consequences, and Deteccion difficulty.
 2. **"Does the 'What happened' read like a vulnerability analysis or an abstract spec?"** If it reads like a spec, rewrite it with specific quantities, cascading consequences, and grounding in actual code.
 3. **"Is there a scenario I'm not seeing?"** Think about what a different AI model would flag. Architecture models catch data flow problems. Edge-case models catch boundary conditions. What are you blind to?
 

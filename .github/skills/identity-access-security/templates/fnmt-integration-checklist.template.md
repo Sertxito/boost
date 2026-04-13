@@ -1,8 +1,8 @@
-# FNMT Integration Checklist Template
+# Plantilla de Lista de Verificacion de Integracion FNMT
 
 ## Objetivo
 
-Checklist de controles minimos para integracion de autenticacion/autorizacion basada en certificado FNMT.
+Lista de verificacion de controles minimos para integracion de autenticacion/autorizacion basada en certificado FNMT.
 
 ## Validacion criptografica
 

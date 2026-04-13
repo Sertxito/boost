@@ -1,10 +1,12 @@
-# Token and Claims Contract Template
+# Plantilla de Contrato de Tokens y Claims
+
+<!-- markdownlint-disable MD060 -->
 
 ## Contexto
 
 - IdP:
-- Issuer esperado:
-- Audience esperada:
+- Emisor esperado:
+- Audiencia esperada:
 - Algoritmo de firma:
 
 ## Claims estandar
@@ -12,7 +14,7 @@
 | Claim | Requerido | Tipo | Ejemplo | Uso |
 | --- | --- | --- | --- | --- |
 | sub | si | string | user-123 | Identidad unica |
-| iss | si | string | https://idp.example | Validacion de emisor |
+| iss | si | string | <https://idp.example> | Validacion de emisor |
 | aud | si | string/array | api://my-api | Validacion de audiencia |
 | exp | si | number | 1735689600 | Expiracion |
 | nbf | recomendado | number | 1735686000 | Not-before |
@@ -36,8 +38,8 @@
 ## Estrategia de refresh token
 
 - Rotacion por uso: si/no
-- Reuse detection: si/no
-- Revocacion por cambio de password: si/no
+- Deteccion de reutilizacion: si/no
+- Revocacion por cambio de contrasena: si/no
 - Revocacion por cambio de rol: si/no
 
 ## Auditoria requerida

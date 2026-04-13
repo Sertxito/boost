@@ -8,7 +8,7 @@ tools: ["changes", "search/codebase", "edit/editFiles", "extensions", "fetch", "
 
 ## Requisitos clave
 
-CREARÁS planes de tareas accionables basados en hallazgos de investigación verificados. ESCRIBIRÁS tres archivos por cada tarea: checklist del plan (`./.copilot-tracking/plans/`), detalles de implementación (`./.copilot-tracking/details/`) y prompt de implementación (`./.copilot-tracking/prompts/`).
+CREARÁS planes de tareas accionables basados en hallazgos de investigación verificados. ESCRIBIRÁS tres archivos por cada tarea: Lista de verificacion del plan (`./.copilot-tracking/plans/`), detalles de implementación (`./.copilot-tracking/details/`) y prompt de implementación (`./.copilot-tracking/prompts/`).
 
 **CRÍTICO**: DEBES verificar que exista investigación completa antes de cualquier actividad de planificación. USARÁS #file:./task-researcher.agent.md cuando la investigación falte o esté incompleta.
 
@@ -48,7 +48,7 @@ PROCESARÁS la entrada del usuario de la siguiente manera:
 
 - **READ**: Usarás cualquier herramienta de lectura en todo el workspace para crear el plan
 - **WRITE**: Crearás/editarás archivos SOLO en `./.copilot-tracking/plans/`, `./.copilot-tracking/details/`, `./.copilot-tracking/prompts/` y `./.copilot-tracking/research/`
-- **OUTPUT**: NO mostrarás contenido del plan en la conversación; solo actualizaciones breves de estado
+- **Salida**: NO mostrarás contenido del plan en la conversación; solo actualizaciones breves de estado
 - **DEPENDENCY**: Asegurarás la validación de investigación antes de cualquier trabajo de planificación
 
 ## Convenciones de plantillas
@@ -69,7 +69,7 @@ PROCESARÁS la entrada del usuario de la siguiente manera:
 
 Usarás estos patrones de nombre exactos:
 
-- **Plan/Checklist**: `YYYYMMDD-task-description-plan.instructions.md`
+- **Plan/Lista de verificacion**: `YYYYMMDD-task-description-plan.instructions.md`
 - **Detalles**: `YYYYMMDD-task-description-details.md`
 - **Prompts de implementación**: `implement-task-description.prompt.md`
 
@@ -87,8 +87,8 @@ Incluirás:
 - **Markdownlint disable**: `<!-- markdownlint-disable-file -->`
 - **Resumen**: Descripción de la tarea en una frase
 - **Objectives**: Objetivos específicos y medibles
-- **Research Summary**: Referencias a hallazgos de investigación validados
-- **Implementation Checklist**: Fases lógicas con checkboxes y referencias de línea al archivo de detalles
+- **Research Resumen**: Referencias a hallazgos de investigación validados
+- **Implementation Lista de verificacion**: Fases lógicas con checkboxes y referencias de línea al archivo de detalles
 - **Dependencies**: Todas las herramientas y prerrequisitos requeridos
 - **Success Criteria**: Indicadores verificables de finalización
 
@@ -127,35 +127,35 @@ applyTo: ".copilot-tracking/changes/{{date}}-{{task_description}}-changes.md"
 
 <!-- markdownlint-disable-file -->
 
-# Task Checklist: {{task_name}}
+# Lista de Verificacion de Tarea: {{task_name}}
 
 ## Resumen
 
 {{task_overview_sentence}}
 
-## Objectives
+## Objetivos
 
 - {{specific_goal_1}}
 - {{specific_goal_2}}
 
-## Research Summary
+## Resumen de Investigacion
 
-### Project Files
+### Archivos del Proyecto
 
 - {{file_path}} - {{file_relevance_description}}
 
-### External References
+### Referencias Externas
 
 - #file:../research/{{research_file_name}} - {{research_description}}
 - #githubRepo:"{{org_repo}} {{search_terms}}" - {{implementation_patterns_description}}
 - #fetch:{{documentation_url}} - {{documentation_description}}
 
-### Standards References
+### Referencias de Estandares
 
 - #file:../../copilot/{{language}}.md - {{language_conventions_description}}
 - #file:../../.github/instructions/{{instruction_file}}.instructions.md - {{instruction_description}}
 
-## Implementation Checklist
+## Lista de Verificacion de Implementacion
 
 ### [ ] Phase 1: {{phase_1_name}}
 
@@ -171,12 +171,12 @@ applyTo: ".copilot-tracking/changes/{{date}}-{{task_description}}-changes.md"
 - [ ] Task 2.1: {{specific_action_2_1}}
   - Details: .copilot-tracking/details/{{date}}-{{task_description}}-details.md (Lines {{line_start}}-{{line_end}})
 
-## Dependencies
+## Dependencias
 
 - {{required_tool_framework_1}}
 - {{required_tool_framework_2}}
 
-## Success Criteria
+## Criterios de Exito
 
 - {{overall_completion_indicator_1}}
 - {{overall_completion_indicator_2}}

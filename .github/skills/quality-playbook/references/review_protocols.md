@@ -37,7 +37,7 @@ Before reviewing, read these files for context:
 - **Grep before claiming missing.** If you think a feature is absent, search the codebase. If found in a different file, that's a location defect, not a missing feature.
 - **Do NOT suggest style changes, refactors, or improvements.** Only flag things that are incorrect or could cause failures.
 
-## Output Format
+## Formato de Salida
 
 Save findings to `quality/code_reviews/YYYY-MM-DD-reviewer.md`
 
@@ -46,7 +46,7 @@ For each file reviewed:
 ### filename.ext
 - **Line NNN:** [BUG / QUESTION / INCOMPLETE] Description. Expected vs. actual. Why it matters.
 
-### Summary
+### Resumen
 - Total findings by severity
 - Files with no findings
 - Overall assessment: SHIP IT / FIX FIRST / NEEDS DISCUSSION
@@ -106,7 +106,7 @@ Después de que la revisión de código produzca hallazgos, escribe pruebas de r
 - **Python:** Use `monkeypatch` or `unittest.mock.patch` to isolate external dependencies. Use `pytest.raises` for exception-path bugs.
 - **Java:** Use Mockito or similar to isolate dependencies. Use `assertThrows` for exception-path bugs.
 
-**Save the regression test output** alongside the code review: if the review is at `quality/code_reviews/2026-03-26-reviewer.md`, the regression tests go in `quality/test_regression.*` and the confirmation results go in the review file as an addendum or in `quality/results/`.
+**Save the regression test Salida** alongside the code review: if the review is at `quality/code_reviews/2026-03-26-reviewer.md`, the regression tests go in `quality/test_regression.*` and the confirmation results go in the review file as an addendum or in `quality/results/`.
 
 ### Por que importan estos guardrails
 
@@ -153,8 +153,8 @@ Before running integration tests, verify:
 | Check | Method | Pass Criteria |
 |-------|--------|---------------|
 | [Happy path flow] | [Specific command or test] | [Specific expected result] |
-| [Variant A end-to-end] | [Command] | [Expected result] |
-| [Variant B end-to-end] | [Command] | [Expected result] |
+| [Variante A de extremo a extremo] | [Command] | [Expected result] |
+| [Variante B de extremo a extremo] | [Command] | [Expected result] |
 | [Output correctness] | [Specific assertion] | [Expected property] |
 | [Component boundary A→B] | [Command] | [Expected result] |
 
@@ -253,31 +253,31 @@ Save results to `quality/results/YYYY-MM-DD-integration.md`
 
 ### Consejos para redactar buenas comprobaciones de integracion
 
-- Cada comprobacion debe ejercer un flujo real end-to-end, no solo llamar una funcion aislada
+- Cada comprobacion debe ejercer un flujo real de extremo a extremo, no solo llamar una funcion aislada
 - Los criterios de aprobacion deben ser especificos y verificables: no "parece correcto", sino "la salida contiene exactamente N registros con la propiedad X"
 - Incluye expectativas de tiempo cuando sea relevante (especialmente en proyectos batch/pipeline)
 - Si el proyecto tiene multiples modos de ejecucion (batch vs. realtime, distintos providers), prueba cada combinacion
 
 ### Ejecucion real contra servicios externos
 
-Las pruebas de integracion deben ejercer dependencias externas reales del proyecto: APIs, bases de datos, servicios, sistemas de archivos. Un protocolo que solo prueba validacion local y parseo de configuracion no es un protocolo de integracion; es una suite de unit tests disfrazada.
+Las pruebas de integracion deben ejercer dependencias externas reales del proyecto: APIs, bases de datos, servicios, sistemas de archivos. Un protocolo que solo prueba validacion local y parseo de configuracion no es un protocolo de integracion; es una suite de Pruebas unitarias disfrazada.
 
 During exploration, identify:
 - **External APIs the project calls** — Look for API keys in .env files, environment variable references, provider/client abstractions, HTTP client configurations
 - **Execution modes** — batch vs. realtime, sync vs. async, different provider backends
-- **Existing integration test runners** — Scripts or test files that already exercise end-to-end flows
+- **Existing integration test runners** — Scripts or test files that already exercise de extremo a extremo flows
 
 Then design the test matrix as a **provider × pipeline × mode** grid. For example, if the project supports 3 API providers and 3 pipelines with batch and realtime modes, the protocol should run real executions across that matrix — not just validate configs locally.
 
 **Structure runs for parallelism.** Group runs so that at most one run per provider executes simultaneously (to avoid rate limits). Use background processes and `wait` for concurrent execution within groups.
 
-**Define per-pipeline quality checks.** Each pipeline produces different output with different correctness criteria. The protocol must specify what fields to check and what values are acceptable for each pipeline — not just "output exists."
+**Define per-pipeline quality checks.** Each pipeline produces different Salida with different correctness criteria. The protocol must specify what fields to check and what values are acceptable for each pipeline — not just "Salida exists."
 
-**Include a post-run verification checklist.** For each run, verify: log file exists with completion message, manifest shows terminal state, validated output files exist and contain parseable data, sample records have expected fields populated, and any existing automated quality check scripts pass.
+**Include a post-run verification Lista de verificacion.** For each run, verify: log file exists with completion message, manifest shows terminal state, validated Salida files exist and contain parseable data, sample records have expected fields populated, and any existing automated quality check scripts pass.
 
 **Pre-flight must check API keys.** If keys are missing, stop and ask — don't skip the live tests silently.
 
-The goal is that running this protocol exercises the full system under real-world conditions, catching issues that local-only testing would miss: provider-specific response format differences, timeout behavior, rate limiting, and output correctness with real LLM responses.
+The goal is that running this protocol exercises the full system under real-world conditions, catching issues that local-only testing would miss: provider-specific response format differences, timeout behavior, rate limiting, and Salida correctness with real LLM responses.
 
 ### Paralelismo y consideracion de rate limits
 
@@ -303,15 +303,15 @@ In the generated protocol, include the actual bash commands with `&` for backgro
 
 Generic pass/fail criteria ("all units validated") miss domain-specific correctness issues. Derive pipeline-specific quality checks from the code itself:
 
-1. **Read validation rules.** If the project validates output (schema validators, assertion functions, business rule checks), those rules define what "correct" looks like. Turn them into quality gates: "field X must satisfy condition Y for all output records."
+1. **Read validation rules.** If the project validates Salida (schema validators, assertion functions, business rule checks), those rules define what "correct" looks like. Turn them into quality gates: "field X must satisfy condition Y for all Salida records."
 
 2. **Lee los enums del esquema.** Si los esquemas definen campos enum (por ejemplo, `outcome: ["fell_in_water", "reached_ship"]`), la compuerta de calidad es: "todas las salidas deben usar valores de este conjunto y la distribucion no debe ser degenerada (no 100% un solo valor)".
 
-3. **Read generation logic.** If the project generates test data (items files, seed data, permutation strategies), understand what variants should appear. If there are 3 personality types, the quality gate is: "all 3 types must appear in output with sufficient sample size."
+3. **Read generation logic.** If the project generates test data (items files, seed data, permutation strategies), understand what variants should appear. If there are 3 personality types, the quality gate is: "all 3 types must appear in Salida with sufficient sample size."
 
-4. **Read existing quality checks.** Search for scripts or functions that already verify output quality (e.g., `integration_checks.py`, validation functions called after runs). Reference or call them directly from the protocol.
+4. **Read existing quality checks.** Search for scripts or functions that already verify Salida quality (e.g., `integration_checks.py`, validation functions called after runs). Reference or call them directly from the protocol.
 
-For each pipeline in the project, the integration protocol should have a dedicated "Quality Checks" section listing 2–4 specific checks with expected values derived from the exploration above. Do not use generic checks like "output exists" — every check must reference a specific field and acceptable value range.
+For each pipeline in the project, the integration protocol should have a dedicated "Quality Checks" section listing 2–4 specific checks with expected values derived from the exploration above. Do not use generic checks like "Salida exists" — every check must reference a specific field and acceptable value range.
 
 ### Tabla de referencia de campos (obligatoria antes de escribir quality gates)
 
@@ -319,7 +319,7 @@ For each pipeline in the project, the integration protocol should have a dedicat
 
 **The fix is procedural, not instructional.** Don't just tell yourself to "cross-check later" — build the reference table FIRST, then write quality gates by copying from it.
 
-Before writing any quality gate that references output field names, build a **Field Reference Table** by re-reading each schema file:
+Before writing any quality gate that references Salida field names, build a **Field Reference Table** by re-reading each schema file:
 
 ```
 ## Field Reference Table (built from schemas, not memory)
@@ -370,9 +370,9 @@ A run that completes without errors may still be wrong. For each integration tes
 
 1. **Process-level:** Did the process exit cleanly? Check log files for completion messages, not just exit codes.
 2. **State-level:** Is the run in a terminal state? Check the run manifest/status file for "complete" (not stuck in "running" or "submitted").
-3. **Data-level:** Does output data exist and parse correctly? Read actual output files, verify they contain valid JSON/CSV/etc.
-4. **Content-level:** Do output records have the expected fields populated with reasonable values? Read 2–3 sample records and check key fields.
+3. **Data-level:** Does Salida data exist and parse correctly? Read actual Salida files, verify they contain valid JSON/CSV/etc.
+4. **Content-level:** Do Salida records have the expected fields populated with reasonable values? Read 2–3 sample records and check key fields.
 5. **Quality-level:** Do the pipeline-specific quality gates pass? Run any existing quality check scripts.
 6. **UI-level (if applicable):** If the project has a dashboard/TUI/UI, verify the run appears correctly there.
 
-Include all applicable levels in the generated protocol's post-run checklist. The common failure is stopping at level 2 (process completed) without checking levels 3–5.
+Include all applicable levels in the generated protocol's post-run Lista de verificacion. The common failure is stopping at level 2 (process completed) without checking levels 3–5.

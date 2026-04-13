@@ -1,9 +1,9 @@
 ---
 name: identity-access-security
-description: "Skill de autenticacion y autorizacion para entornos productivos. Define estrategia de identidad end-to-end: roles/subroles, claims, boundaries de confianza, guards frontend, validacion de tokens en backend, refresh token rotation, revocacion, integracion con proveedores externos (incluida FNMT cuando aplique), auditoria y trazabilidad de eventos de seguridad. Usala para diseno, implementacion, hardening o revision de seguridad de identidad y acceso."
+description: "Skill de autenticacion y autorizacion para entornos productivos. Define estrategia de identidad de extremo a extremo: roles/subroles, claims, fronteras de confianza, guards frontend, validacion de tokens en backend, rotacion de refresh token, revocacion, integracion con proveedores externos (incluida FNMT cuando aplique), auditoria y trazabilidad de eventos de seguridad. Usala para diseno, implementacion, fortalecimiento o revision de seguridad de identidad y acceso."
 ---
 
-# Identity and Access Security
+# Seguridad de Identidad y Acceso
 
 Skill para estandarizar autenticacion, autorizacion y trazabilidad de acceso en aplicaciones modernas.
 
@@ -11,23 +11,23 @@ Skill para estandarizar autenticacion, autorizacion y trazabilidad de acceso en 
 
 Usala cuando se pida alguno de estos temas:
 
-- Estrategia de autenticacion y autorizacion end-to-end
+- Estrategia de autenticacion y autorizacion de extremo a extremo
 - Roles, subroles, permisos y claims
 - Guards de rutas en frontend
 - Validacion y autorizacion por claims en backend
 - Access token y refresh token (rotacion y revocacion)
 - Integracion con identidad externa (OIDC, SAML, certificados, FNMT)
-- Hardening de sesiones, cookies y flujos de login/logout
+- fortalecimiento de sesiones, cookies y flujos de login/logout
 - Auditoria de eventos de seguridad y trazabilidad de acceso
 
 ## Artefactos esperados
 
 Las plantillas canonicas viven en `templates/` dentro de esta skill.
-Este Boost se mantiene en modo template-only.
+Este Boost se mantiene en modo solo-plantillas.
 Los archivos en `docs/` se generan en el proyecto destino al aplicar la skill.
 
 1. docs/security/identity-access-standard.md
-- Modelo de identidad y flujo E2E
+- Modelo de identidad y flujo de extremo a extremo
 - Roles/subroles/claims y politicas de autorizacion
 - Estrategia de tokens y sesiones
 - Reglas frontend/backend
@@ -86,7 +86,7 @@ Los archivos en `docs/` se generan en el proyecto destino al aplicar la skill.
 
 ## Prompt rapido sugerido
 
-Usa la skill "identity-access-security" para definir estrategia completa de autenticacion/autorizacion (roles, subroles, claims, guards frontend, validacion backend, refresh token y federacion FNMT) con trazabilidad end-to-end.
+Usa la skill "identity-access-security" para definir estrategia completa de autenticacion/autorizacion (roles, subroles, claims, guards frontend, validacion backend, refresh token y federacion FNMT) con trazabilidad de extremo a extremo.
 
 ## Templates de referencia en esta skill
 

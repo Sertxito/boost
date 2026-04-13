@@ -61,15 +61,15 @@ Todos los agentes estan en `.github/agents`.
 | `DevOps Expert` | CI/CD, despliegue, observabilidad, automatizacion | `Usa el agente "DevOps Expert" para proponer pipeline y estrategia de rollback.` |
 | `Expert .NET software engineer mode instructions` | Diseno e implementacion .NET avanzada | `Usa "Expert .NET software engineer mode instructions" para redisenar este servicio con patrones modernos.` |
 | `Implementation Plan Generation Mode` | Crear plan de implementacion detallado | `Usa "Implementation Plan Generation Mode" para planificar esta feature en fases.` |
-| `Agente de modernizacion` | Analisis y plan de modernizacion end-to-end | `Usa "Agente de modernizacion" para evaluar deuda tecnica y roadmap de modernizacion.` |
-| `Playwright Tester Mode` | Exploracion y pruebas E2E con Playwright | `Usa "Playwright Tester Mode" para crear y validar pruebas del login.` |
+| `Agente de modernizacion` | Analisis y plan de modernizacion de extremo a extremo | `Usa "Agente de modernizacion" para evaluar deuda tecnica y roadmap de modernizacion.` |
+| `Playwright Tester Mode` | Exploracion y pruebas de extremo a extremo con Playwright | `Usa "Playwright Tester Mode" para crear y validar pruebas del login.` |
 | `Polyglot Test Fixer` | Corregir errores de compilacion en tests/codigo | `Usa "Polyglot Test Fixer" para arreglar fallos de compilacion en los tests.` |
 | `Polyglot Test Generator` | Generar tests completos multi-fase | `Usa "Polyglot Test Generator" para subir cobertura del modulo de pagos.` |
 | `Polyglot Test Implementer` | Ejecutar una fase concreta del plan de tests | `Usa "Polyglot Test Implementer" para implementar la fase 2 del plan.` |
 | `Polyglot Test Planner` | Planificar estrategia de tests por fases | `Usa "Polyglot Test Planner" para dividir testing por prioridad y riesgo.` |
 | `SE: Architect` | Revisión de arquitectura y escalabilidad | `Usa "SE: Architect" para revisar riesgos de escalabilidad del sistema.` |
 | `SE: Tech Writer` | Documentacion tecnica, guias, tutoriales | `Usa "SE: Tech Writer" para redactar la guia de uso del modulo API.` |
-| `Instrucciones del Task Planner` | Planes accionables con artefactos de seguimiento | `Usa "Instrucciones del Task Planner" para generar plan y checklist de implementacion.` |
+| `Instrucciones del Task Planner` | Planes accionables con artefactos de seguimiento | `Usa "Instrucciones del Task Planner" para generar plan y lista de verificacion de implementacion.` |
 | `Instrucciones del Task Researcher` | Investigacion tecnica previa a implementar | `Usa "Instrucciones del Task Researcher" para investigar opciones de autenticacion.` |
 
 ## 3. Skills disponibles (cuando invocarlas explicitamente)
@@ -82,7 +82,7 @@ Todas las skills estan en `.github/skills/*/SKILL.md`.
 | `azure-devops-cli` | Operaciones Azure DevOps por CLI | `Usa "azure-devops-cli" para listar pipelines y revisar builds fallidos.` |
 | `aws-core` | Marco base para trabajar en AWS (discovery, plan, ejecucion y validacion) | `Usa "aws-core" para definir estrategia de trabajo en AWS antes de implementar.` |
 | `aws-deploy` | Despliegues en AWS con enfoque seguro y rollback | `Usa "aws-deploy" para preparar y ejecutar despliegue en ECS con rollback.` |
-| `aws-security` | Revisiones de seguridad y hardening en AWS | `Usa "aws-security" para revisar IAM, secretos y configuracion insegura.` |
+| `aws-security` | Revisiones de seguridad y fortalecimiento en AWS | `Usa "aws-security" para revisar IAM, secretos y configuracion insegura.` |
 | `aws-observability` | Observabilidad en AWS (logs, metricas, alarmas, trazas) | `Usa "aws-observability" para definir dashboard y alertas de CloudWatch.` |
 | `aws-iac` | IaC en AWS con Terraform/CloudFormation y cambios controlados | `Usa "aws-iac" para planificar y aplicar cambios de infraestructura con rollback.` |
 | `aws-cost` | Optimizacion de coste en AWS con impacto medible | `Usa "aws-cost" para detectar top cost drivers y plan de ahorro.` |
@@ -99,12 +99,12 @@ Todas las skills estan en `.github/skills/*/SKILL.md`.
 | `documentation-writer` | Documentacion siguiendo Diataxis | `Usa "documentation-writer" para crear tutorial y referencia API.` |
 | `dotnet-best-practices` | Revisar cumplimiento de buenas practicas .NET | `Usa "dotnet-best-practices" en este proyecto C#.` |
 | `dotnet-design-pattern-review` | Revisar patrones de diseno en C#/.NET | `Usa "dotnet-design-pattern-review" en Application y Domain.` |
-| `engineering-quality-traceability` | Estandares de ingenieria, arquitectura y trazabilidad end-to-end para produccion | `Usa "engineering-quality-traceability" para definir estandares y auditoria operativa de punta a punta.` |
+| `engineering-quality-traceability` | Estandares de ingenieria, arquitectura y trazabilidad de extremo a extremo para produccion | `Usa "engineering-quality-traceability" para definir estandares y auditoria operativa de punta a punta.` |
 | `generate-custom-instructions-from-codebase` | Crear instrucciones desde diferencias entre versiones | `Usa "generate-custom-instructions-from-codebase" comparando rama main y release.` |
-| `identity-access-security` | Estrategia completa de autenticacion/autorizacion (roles, claims, guards, tokens, federacion) | `Usa "identity-access-security" para disenar autenticacion y autorizacion end-to-end con trazabilidad.` |
+| `identity-access-security` | Estrategia completa de autenticacion/autorizacion (roles, claims, guards, tokens, federacion) | `Usa "identity-access-security" para disenar autenticacion y autorizacion de extremo a extremo con trazabilidad.` |
 | `playwright-generate-test` | Generar test Playwright desde escenario | `Usa "playwright-generate-test" para el flujo de checkout.` |
 | `polyglot-test-agent` | Generacion integral de tests multi-lenguaje | `Usa "polyglot-test-agent" para subir cobertura a 80%.` |
-| `project-workflow-analysis-blueprint-generator` | Documentar flujos end-to-end reales del codigo | `Usa "project-workflow-analysis-blueprint-generator" para mapear entrypoints y flujo de datos.` |
+| `project-workflow-analysis-blueprint-generator` | Documentar flujos de extremo a extremo reales del codigo | `Usa "project-workflow-analysis-blueprint-generator" para mapear entrypoints y flujo de datos.` |
 | `quality-playbook` | Sistema de calidad completo (QUALITY, protocolos, tests) | `Usa "quality-playbook" para crear playbook de calidad del repo.` |
 | `refactor-plan` | Plan de refactor multiarchivo con secuencia segura | `Usa "refactor-plan" para este refactor en 5 modulos.` |
 | `security-review` | Auditoria de seguridad razonada | `Usa "security-review" para buscar SQLi, XSS y fallos de auth.` |
@@ -149,11 +149,11 @@ Regla de mantenimiento:
 2. `Usa "documentation-writer" para formato Diataxis.`
 3. Revisar consistencia con instrucciones de `.github/instructions`.
 
-### Flujo E: calidad y trazabilidad E2E
+### Flujo E: calidad y trazabilidad de extremo a extremo
 
 1. `Usa "engineering-quality-traceability" para baseline de estandares y trazabilidad.`
 2. Instanciar templates de `.github/skills/engineering-quality-traceability/templates/*` en el proyecto destino.
-3. Validar checklist operativo generado antes de merge.
+3. Validar Lista de verificacion operativo generado antes de merge.
 
 ### Flujo F: identidad y acceso
 
@@ -178,7 +178,7 @@ Este apartado es clave para este repo: casi todos los proyectos de entrada seran
 1. Descubrimiento inicial (sin tocar codigo)
 
 - Usa `context-map` para identificar modulos, dependencias, entrypoints y zonas de riesgo.
-- Usa `project-workflow-analysis-blueprint-generator` para mapear flujos reales end-to-end.
+- Usa `project-workflow-analysis-blueprint-generator` para mapear flujos reales de extremo a extremo.
 - Si hay riesgo arquitectonico alto, usa `SE: Architect` para una evaluacion inicial.
 
 1. Baseline y riesgos
@@ -222,7 +222,7 @@ Este apartado es clave para este repo: casi todos los proyectos de entrada seran
 
 Cada cambio relevante en legacy debe actualizar la fuente de verdad en el mismo ciclo de trabajo. Si no se actualiza, el conocimiento vuelve a degradarse y el proyecto regresa al estado legacy opaco.
 
-Checklist minimo por cambio:
+Lista de verificacion minimo por cambio:
 
 - Se actualizo el estado actual impactado.
 - Se registraron decisiones tomadas y su por que.
@@ -274,7 +274,7 @@ En esos casos, pide la tarea directamente y Copilot operara en modo innato.
 - Para cambios riesgosos: pedir validacion (tests, build, diff resumido).
 - En refactors: exigir plan de rollback.
 - Para seguridad y compliance: usar skill dedicada (`security-review`).
-- Para estandares de ingenieria y trazabilidad E2E en produccion: usar (`engineering-quality-traceability`).
+- Para estandares de ingenieria y trazabilidad de extremo a extremo en produccion: usar (`engineering-quality-traceability`).
 - Para autenticacion/autorizacion avanzada (roles, claims, tokens, guards, federacion): usar (`identity-access-security`).
 - Si hay solape de trazabilidad: usa `engineering-quality-traceability` para trazabilidad general de sistema y `identity-access-security` para trazabilidad de seguridad (auth/authz/tokens/denegaciones).
 
@@ -292,7 +292,7 @@ En esos casos, pide la tarea directamente y Copilot operara en modo innato.
 
 `Usa la skill "quality-playbook" para crear artefactos de calidad en este codebase y dame plan de ejecucion.`
 
-`Usa la skill "engineering-quality-traceability" para definir convenciones de codigo/arquitectura y reforzar la auditoria end-to-end del aplicativo.`
+`Usa la skill "engineering-quality-traceability" para definir convenciones de codigo/arquitectura y reforzar la auditoria de extremo a extremo del aplicativo.`
 
 `Usa la skill "identity-access-security" para definir modelo de identidad, autorizacion por claims y politica de refresh token con controles frontend/backend.`
 

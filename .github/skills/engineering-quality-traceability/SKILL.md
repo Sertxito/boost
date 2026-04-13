@@ -1,9 +1,9 @@
 ---
 name: engineering-quality-traceability
-description: "Skill de calidad de ingenieria y trazabilidad end-to-end para entornos productivos. Define estandares de programacion y arquitectura, convenciones de nomenclatura, catalogo de eventos de auditoria, correlacion de trazas, logging estructurado, y checklist de controles minimos en CI/CD. Usala cuando se pida hardening de calidad, estandarizar practicas de equipo, mejorar observabilidad, o auditar el comportamiento de una aplicacion de punta a punta."
+description: "Skill de calidad de ingenieria y trazabilidad de extremo a extremo para entornos productivos. Define estandares de programacion y arquitectura, convenciones de nomenclatura, catalogo de eventos de auditoria, correlacion de trazas, logging estructurado, y lista de verificacion de controles minimos en CI/CD. Usala cuando se pida fortalecimiento de calidad, estandarizar practicas de equipo, mejorar observabilidad, o auditar el comportamiento de una aplicacion de punta a punta."
 ---
 
-# Engineering Quality and Traceability
+# Calidad de Ingenieria y Trazabilidad
 
 Skill para elevar la calidad tecnica y la trazabilidad operativa de un proyecto en produccion.
 
@@ -13,7 +13,7 @@ Usala cuando la solicitud incluya alguna de estas intenciones:
 
 - Estandarizar buenas practicas de programacion y arquitectura
 - Definir convenciones de nombres para variables, metodos y clases
-- Mejorar auditoria y observabilidad end-to-end
+- Mejorar auditoria y observabilidad de extremo a extremo
 - Crear o fortalecer trazabilidad funcional y tecnica en produccion
 - Establecer controles minimos de calidad en pull requests y CI/CD
 
@@ -22,19 +22,19 @@ Usala cuando la solicitud incluya alguna de estas intenciones:
 La skill debe generar o actualizar estos artefactos (adaptados al stack real del repo):
 
 Las plantillas canonicas viven en `templates/` dentro de esta skill.
-Este Boost se mantiene en modo template-only.
+Este Boost se mantiene en modo solo-plantillas.
 Los archivos en `docs/` se generan en el proyecto destino al aplicar la skill.
 
 1. `docs/quality/engineering-standards.md`
 - Convenciones de codigo y nomenclatura
 - Principios de diseno y arquitectura aplicables
-- Reglas de revisiones de codigo y definition of done
+- Reglas de revisiones de codigo y criterio de finalizacion
 
 2. `docs/observability/traceability-standard.md`
-- Estandar de trazabilidad end-to-end
+- Estandar de trazabilidad de extremo a extremo
 - Esquema de correlation/request/trace IDs
 - Politica de logs estructurados y niveles
-- Integracion logs + metrics + traces
+- Integracion logs + metricas + trazas
 
 3. `docs/observability/audit-event-catalog.md`
 - Catalogo de eventos auditables por dominio
@@ -42,7 +42,7 @@ Los archivos en `docs/` se generan en el proyecto destino al aplicar la skill.
 - Clasificacion de severidad y retencion
 
 4. `docs/ops/production-checklist.md`
-- Checklist operativa para despliegues
+- Lista de verificacion operativa para despliegues
 - Alertas, SLO/SLI, runbooks y rollback
 - Controles de seguridad y compliance de observabilidad
 
@@ -77,12 +77,12 @@ Los archivos en `docs/` se generan en el proyecto destino al aplicar la skill.
 - Establecer contrato de trazabilidad transversal
 
 4. Aplicar controles en el ciclo de entrega
-- Incorporar checklist de PR y gates de CI/CD
+- Incorporar Lista de verificacion de PR y gates de CI/CD
 - Exigir evidencia operativa para cambios criticos
 
 5. Verificar en produccion
 - Validar cobertura de eventos auditables
-- Confirmar visibilidad end-to-end de un caso real
+- Confirmar visibilidad de extremo a extremo de un caso real
 
 ## Perfil backend .NET (reglas explicitas)
 
@@ -176,7 +176,7 @@ Cuando el proyecto tenga frontend Angular, esta skill debe forzar ademas los sig
 
 ## Prompt rapido sugerido
 
-`Usa la skill "engineering-quality-traceability" para crear estandares de codigo y arquitectura, y dejar implementada una auditoria end-to-end con trazabilidad operativa para produccion.`
+`Usa la skill "engineering-quality-traceability" para crear estandares de codigo y arquitectura, y dejar implementada una auditoria de extremo a extremo con trazabilidad operativa para produccion.`
 
 ## Templates de referencia en esta skill
 

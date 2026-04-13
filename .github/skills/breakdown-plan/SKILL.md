@@ -49,13 +49,13 @@ Antes de usar este prompt, asegúrate de tener los artefactos completos del fluj
 Crea dos entregables principales:
 
 1. **Project Plan**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/project-plan.md`
-2. **Issue Creation Checklist**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/issues-checklist.md`
+2. **Issue Creation Lista de verificacion**: `/docs/ways-of-work/plan/{epic-name}/{feature-name}/issues-checklist.md`
 
 ### Estructura del plan del proyecto
 
 #### 1. Visión general del proyecto
 
-- **Feature Summary**: Descripcion breve y valor de negocio
+- **Feature Resumen**: Descripcion breve y valor de negocio
 - **Success Criteria**: Resultados medibles y KPI
 - **Key Milestones**: Desglose de entregables principales sin cronograma
 - **Risk Assessment**: Posibles bloqueos y estrategias de mitigacion
@@ -115,7 +115,7 @@ graph TD
 ## Definition of Done
 
 - [ ] All feature stories completed
-- [ ] End-to-end testing passed
+- [ ] Pruebas de extremo a extremo superadas
 - [ ] Performance benchmarks met
 - [ ] Documentation updated
 - [ ] User acceptance testing completed
@@ -449,7 +449,7 @@ jobs:
         # Move related issues to "Done" column
 ```
 
-### Checklist de creación de issues
+### Lista de verificacion de creación de issues
 
 #### Preparación previa a la creación
 
@@ -500,7 +500,7 @@ jobs:
 
 ### Metricas de entrega del proyecto
 
-- **Definition of Done Compliance**: 100% of completed stories meet DoD criteria
+- **criterio de finalizacion Compliance**: 100% of completed stories meet DoD criteria
 - **Acceptance Criteria Coverage**: 100% of acceptance criteria validated
 - **Sprint Goal Achievement**: >90% of sprint goals successfully delivered
 - **Stakeholder Satisfaction**: >90% stakeholder approval for completed features

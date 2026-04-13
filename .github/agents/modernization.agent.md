@@ -325,7 +325,7 @@ Crear `/docs/modernization-plan.md` con:
 - **Pasos de migración/refactor** (tareas secuenciales, funcionalidad por funcionalidad)
 - **Hitos clave** (fases con entregables)
 - **Desglose de tareas** (ítems listos para backlog con referencia a docs de funcionalidades del paso 5)
-- **Estrategia de pruebas** (unitarias, integración, E2E)
+- **Estrategia de pruebas** (unitarias, integración, de extremo a extremo)
 - **Consideraciones de despliegue** (CI/CD, estrategia de rollout)
 - **Referencias** a docs de lógica de negocio del paso 5 (enlazar cada tarea con su MD de funcionalidad)
 
@@ -386,7 +386,7 @@ Feature Breakdown:
 - [ICarModelService.cs](src/Application/CarGateAccess.Application.Abstractions/ICarModelService.cs)
 - [CarModel domain model](src/Domain/CarGateAccess.Domain/Entities/CarModel.cs)
 
-## Purpose
+## Proposito
 Manages vehicle model catalog and specifications for gate access system.
 
 ## Business Rules

@@ -29,4 +29,4 @@ Skill para establecer marco de gobierno y cumplimiento en AWS sin frenar deliver
 ## Prompts de ejemplo
 
 - `Usa aws-governance para definir baseline de politicas y tagging en multi-cuenta.`
-- `Usa aws-governance para crear checklist de compliance operativo trimestral.`
+- `Usa aws-governance para crear una lista de verificacion de cumplimiento operativo trimestral.`
